@@ -1,3 +1,4 @@
+# Atividade 1
 # Trecho 1
 We see three critical differences between programming and software engineering: time, scale, and the trade-offs at play. On a software engineering project, engineers need to be more concerned with the passage of time and the eventual need for change. In a software engineering organization, we need to be more concerned about scale and efficiency, both for the software we produce as well as for the organization that is producing it. Finally, as software engineers, we are asked to make more complex decisions with higher-stakes outcomes, often based on imprecise estimates of time and growth.
 
@@ -10,6 +11,7 @@ Within Google, we sometimes say, “Software engineering is programming integrat
 ## Comentário
 A programação é uma parte essencial da engenharia de software, mas quando reconhecemos as distinções entre essas duas áreas e destacamos as tarefas específicas de cada uma, percebemos que a programação por si só não consegue suprir todas as demandas da engenharia de software. Da mesma forma, a engenharia de software não pode cumprir seu papel sem a programação. A frase “Software engineering is programming integrated over time.” captura essa diferença fundamental, ressaltando que a engenharia de software adiciona a dimensão do tempo à programação, transformando-a em um processo mais completo e contínuo.
 
+# Atividade 2
 # Analisando Ferramentas e comparando seus aspectos não funcionais:
 Para uma melhor analise, eu destaquei seis aspectos de cada uma das comparações.
 
@@ -39,7 +41,7 @@ Agora vamos comparar tecnologias utilizadas para orquestração de contêineres,
 
 **Comunidade e Suporte:** O Kubernetes possui uma das maiores e mais ativas comunidades no espaço de orquestração de contêineres, com suporte extenso e constante evolução. Já o Docker Swarm possui uma menor comunidade e menor foco no desenvolvimento, especialmente à medida que o Kubernetes se torna a escolha padrão para muitas organizações.
 
-**Gerenciamento e Monitoramento:** O Docker Swarm possui ferramentas de gerenciamento e monitoramento mais limitadas, mas que são mais simples de configurar. Enquanto o Kubernetes oferece ferramentas integradas e uma vasta gama de opções para gerenciamento e monitoramento de clusters. No entanto, com uma configuração muito mais complexa.
+**Gerenciamento e Monitoramento:** O Docker Swarm possui ferramentas de gerenciamento e monitoramento mais limitadas, mas que são maiCs simples de configurar. Enquanto o Kubernetes oferece ferramentas integradas e uma vasta gama de opções para gerenciamento e monitoramento de clusters. No entanto, com uma configuração muito mais complexa.
 
 ## MongoDB vs PostgreSQL
 Por último, vamos comparar duas tecnologias utilizadas para banco de dados, utilizando também 5 aspectos principais:
@@ -53,3 +55,10 @@ Por último, vamos comparar duas tecnologias utilizadas para banco de dados, uti
 **Maturidade e Comunidade:** O PostigreSQL é um dos bancos de dados mais antigos e maduros, com uma comunidade vasta e ativa, além de suporte sólido de documentação e ferramentas. Enquanto o MongoDB é relativamente mais novo, mas com uma comunidade crescente e uma ampla adoção em startups e empresas que precisam de flexibilidade de dados.
 
 **Facilidade de COnfiguração e Administração:** O MongoDB é mias fácil de configurar, especialmente para desenvolvedores que necessitam de uma solução rápida e flexível. No entanto, a administração pode se tornar complexa em ambientes muito grandes. Já a configuração inicial do PostgreSQL pode ser mais complexa, especialmente devido à necessidade de planejamento de schema, mas oferece ferramentas robustas para administração, backup e recuperação.
+
+# Atividade 3
+![arquitetura da netflix](/Engenharia_de_Software/netflix-architecture.jpeg)
+
+**Complexidade vs. Escalabilidade:** A arquitetura é altamente escalável, mas cada camada (microservices, armazenamento de dados, mensageria, etc.) adiciona complexidade que precisa ser gerida com cuidado.
+**Agilidade vs. Custos de Manutenção:** A estrutura modular permite agilidade em mudanças e desenvolvimento, mas exige equipes especializadas para manter cada parte da arquitetura.
+**Latência vs. Resiliência:** Garantir baixa latência em um sistema tão distribuído é desafiador, exigindo compensações em termos de resiliência e consistência de dados.
