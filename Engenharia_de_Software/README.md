@@ -70,10 +70,11 @@ Por último, vamos comparar duas tecnologias utilizadas para banco de dados, uti
 ![arquitetura da netflix](/Engenharia_de_Software/imagens/HospedagemCaes.drawio.png)
 
 ## Classe: Cao
-public class Cao {
-    private String nome;
-    private String raca;
-    private int idade;
+
+    public class Cao {
+        private String nome;
+        private String raca;
+        private int idade;   
 
     public Cao(String nome, String raca, int idade) {
         this.nome = nome;
@@ -111,10 +112,11 @@ public class Cao {
 }
 
 ## Classe: Hospedagem
-public class Hospedagem {
-    private String nomeHospedagem;
-    private int dias;
-    private Cao cao;
+
+    public class Hospedagem {
+        private String nomeHospedagem;
+        private int dias;
+        private Cao cao;
 
     public Hospedagem(String nomeHospedagem, int dias, Cao cao) {
         this.nomeHospedagem = nomeHospedagem;
@@ -129,10 +131,11 @@ public class Hospedagem {
 }
 
 ## Classe: Main
-public class Main {
+
+    public class Main {
     public static void main(String[] args) {
         Cao cao = new Cao("Rex", "Golden Retriever", 5);
         Hospedagem hospedagem = new Hospedagem("Hotel Canino", 7, cao);
         hospedagem.exibirDetalhesHospedagem();
     }
-}
+    }
