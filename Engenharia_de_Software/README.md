@@ -133,9 +133,9 @@ Por último, vamos comparar duas tecnologias utilizadas para banco de dados, uti
 ## Classe: Main
 
     public class Main {
-    public static void main(String[] args) {
-        Cao cao = new Cao("Rex", "Golden Retriever", 5);
-        Hospedagem hospedagem = new Hospedagem("Hotel Canino", 7, cao);
-        hospedagem.exibirDetalhesHospedagem();
-    }
+        public static void main(String[] args) {
+            Cao cao = new Cao("Rex", "Golden Retriever", 5);
+            Hospedagem hospedagem = new Hospedagem("Hotel Canino", 7, cao);
+            hospedagem.exibirDetalhesHospedagem();
+        }
     }
