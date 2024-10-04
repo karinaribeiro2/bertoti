@@ -57,8 +57,82 @@ Por último, vamos comparar duas tecnologias utilizadas para banco de dados, uti
 **Facilidade de COnfiguração e Administração:** O MongoDB é mias fácil de configurar, especialmente para desenvolvedores que necessitam de uma solução rápida e flexível. No entanto, a administração pode se tornar complexa em ambientes muito grandes. Já a configuração inicial do PostgreSQL pode ser mais complexa, especialmente devido à necessidade de planejamento de schema, mas oferece ferramentas robustas para administração, backup e recuperação.
 
 # Atividade 3
-![arquitetura da netflix](/Engenharia_de_Software/netflix-architecture.jpeg)
+![arquitetura da netflix](/Engenharia_de_Software/imagens/netflix-architecture.jpeg)
 
 **Complexidade vs. Escalabilidade:** A arquitetura é altamente escalável, mas cada camada (microservices, armazenamento de dados, mensageria, etc.) adiciona complexidade que precisa ser gerida com cuidado.
 **Agilidade vs. Custos de Manutenção:** A estrutura modular permite agilidade em mudanças e desenvolvimento, mas exige equipes especializadas para manter cada parte da arquitetura.
 **Latência vs. Resiliência:** Garantir baixa latência em um sistema tão distribuído é desafiador, exigindo compensações em termos de resiliência e consistência de dados.
+
+# Atividade 4
+**Hospedagens de Cães**
+
+## Diagrama
+![arquitetura da netflix](/Engenharia_de_Software/imagens/HospedagemCaes.drawio.png)
+
+## Classe: Cao
+public class Cao {
+    private String nome;
+    private String raca;
+    private int idade;
+
+    public Cao(String nome, String raca, int idade) {
+        this.nome = nome;
+        this.raca = raca;
+        this.idade = idade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getRaca() {
+        return raca;
+    }
+
+    public void setRaca(String raca) {
+        this.raca = raca;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Nome: " + nome + ", Raça: " + raca + ", Idade: " + idade);
+    }
+}
+
+## Classe: Hospedagem
+public class Hospedagem {
+    private String nomeHospedagem;
+    private int dias;
+    private Cao cao;
+
+    public Hospedagem(String nomeHospedagem, int dias, Cao cao) {
+        this.nomeHospedagem = nomeHospedagem;
+        this.dias = dias;
+        this.cao = cao;
+    }
+
+    public void exibirDetalhesHospedagem() {
+        System.out.println("Hospedagem: " + nomeHospedagem + ", Dias: " + dias);
+        cao.exibirInformacoes();
+    }
+}
+
+## Classe: Main
+public class Main {
+    public static void main(String[] args) {
+        Cao cao = new Cao("Rex", "Golden Retriever", 5);
+        Hospedagem hospedagem = new Hospedagem("Hotel Canino", 7, cao);
+        hospedagem.exibirDetalhesHospedagem();
+    }
+}
